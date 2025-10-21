@@ -2,7 +2,104 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { StarIcon, CalendarIcon } from '@heroicons/react/24/solid';
 
-const ServiceCard = ({ service }) => {
+const ServiceCard = ({ service, viewMode = 'grid' }) => {
+  if (viewMode === 'list') {
+    return (
+      <motion.div
+        whileHover={{ 
+          backgroundColor: '#f9fafb',
+          transition: { duration: 0.2 }
+        }}
+        className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-6"
+      >
+        <div className="flex flex-col md:flex-row md:items-center gap-6">
+          <div className="w-full md:w-48 h-32 rounded-lg overflow-hidden flex-shrink-0">
+            <img 
+              src={service.image} 
+              alt={service.serviceName}
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+          
+          <div className="flex-1">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
+              <div className="flex-1">
+                <div className="flex items-center mb-2">
+                  <div className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded mr-3">
+                    {service.category}
+                  </div>
+                  <div className="flex items-center">
+                    {[...Array(5)].map((_, i) => (
+                      <StarIcon
+                        key={i}
+                        className={`w-4 h-4 ${
+                          i < Math.floor(service.rating) 
+                            ? 'text-yellow-400 fill-current' 
+                            : 'text-gray-300'
+                        }`}
+                      />
+                    ))}
+                    <span className="ml-1 text-sm text-gray-600">({service.rating})</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  {service.serviceName}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 line-clamp-2">
+                  {service.description}
+                </p>
+              </div>
+              
+              <div className="text-right flex-shrink-0">
+                <div className="text-2xl font-bold text-blue-600 mb-1">${service.price}</div>
+                <div className="text-sm text-gray-500 mb-2">per session</div>
+                <div className={`px-2 py-1 rounded-full text-xs font-medium ${
+                  service.slotsAvailable > 2 
+                    ? 'bg-green-100 text-green-800' 
+                    : service.slotsAvailable > 0 
+                    ? 'bg-yellow-100 text-yellow-800' 
+                    : 'bg-red-100 text-red-800'
+                }`}>
+                  {service.slotsAvailable} slots
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                    <span className="text-blue-600 text-sm font-bold">
+                      {service.providerName.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-700">{service.providerName}</p>
+                    <p className="text-xs text-gray-500">{service.providerEmail}</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center text-sm text-gray-600">
+                  <CalendarIcon className="w-4 h-4 mr-1 text-green-500" />
+                  <span>{service.slotsAvailable} available</span>
+                </div>
+              </div>
+              
+              <Link 
+                to={`/service/${service.serviceId}`}
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 whitespace-nowrap"
+              >
+                View Details
+              </Link>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div
       whileHover={{ 
