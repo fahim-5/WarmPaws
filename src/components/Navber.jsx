@@ -25,7 +25,6 @@ const Navbar = () => {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-2xl">🐾</span>
@@ -33,7 +32,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
@@ -70,7 +68,6 @@ const Navbar = () => {
                   My Profile
                 </Link>
                 
-                {/* User Avatar & Dropdown */}
                 <div className="relative group">
                   <button className="flex items-center space-x-2 focus:outline-none">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
@@ -91,7 +88,6 @@ const Navbar = () => {
                     </span>
                   </button>
                   
-                  {/* Dropdown Menu */}
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <button
                       onClick={handleLogout}
@@ -120,7 +116,6 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -152,7 +147,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
