@@ -1,0 +1,194 @@
+[
+  {
+    "tipId": 1,
+    "title": "Protect Those Paws from Ice and Salt",
+    "category": "Paw Care",
+    "description": "Winter streets are often treated with salt and de-icers that can irritate and damage your pet's paws. Always wipe their paws after walks to remove any chemicals.",
+    "detailedTips": [
+      "Use pet-safe ice melts around your home",
+      "Consider waterproof booties for extreme conditions",
+      "Apply paw balm before walks to create a protective barrier",
+      "Check for ice balls between toes after walks"
+    ],
+    "icon": "🐾",
+    "priority": "high",
+    "petTypes": ["dogs", "cats"],
+    "image": "https://i.postimg.cc/XYHjK8mB/paw-protection-tip.jpg"
+  },
+  {
+    "tipId": 2,
+    "title": "Watch for Hypothermia Signs",
+    "category": "Health & Safety",
+    "description": "Pets can get hypothermia just like humans. Know the signs and act quickly if you notice shivering, weakness, or shallow breathing.",
+    "detailedTips": [
+      "Limit outdoor time in extreme cold (below 20°F)",
+      "Use sweaters or coats for short-haired breeds",
+      "Watch for pale or blue gums - a sign of circulation issues",
+      "Dry your pet thoroughly after being in snow or rain"
+    ],
+    "icon": "🌡️",
+    "priority": "high",
+    "petTypes": ["dogs", "cats", "small animals"],
+    "image": "https://i.postimg.cc/XYHjK8mB/hypothermia-tip.jpg"
+  },
+  {
+    "tipId": 3,
+    "title": "Adjust Feeding for Winter Activity Levels",
+    "category": "Nutrition",
+    "description": "Indoor pets may need fewer calories in winter, while active outdoor pets might need more. Monitor weight and adjust food accordingly.",
+    "detailedTips": [
+      "Reduce portions for less active indoor pets by 10-15%",
+      "Increase high-quality protein for outdoor working dogs",
+      "Provide warm meals to help maintain body temperature",
+      "Consult your vet for breed-specific dietary adjustments"
+    ],
+    "icon": "🍲",
+    "priority": "medium",
+    "petTypes": ["dogs", "cats"],
+    "image": "https://i.postimg.cc/XYHjK8mB/winter-nutrition-tip.jpg"
+  },
+  {
+    "tipId": 4,
+    "title": "Create Cozy Indoor Spaces",
+    "category": "Comfort",
+    "description": "Ensure your pet has warm, draft-free sleeping areas away from cold floors and windows during winter months.",
+    "detailedTips": [
+      "Elevate beds off cold floors",
+      "Use thermal or self-warming pet beds",
+      "Place beds away from drafts and exterior doors",
+      "Add extra blankets for nesting"
+    ],
+    "icon": "🏠",
+    "priority": "medium",
+    "petTypes": ["dogs", "cats", "small animals"],
+    "image": "https://i.postimg.cc/XYHjK8mB/cozy-space-tip.jpg"
+  },
+  {
+    "tipId": 5,
+    "title": "Never Leave Pets in Cold Cars",
+    "category": "Safety",
+    "description": "Cars act like refrigerators in winter, holding in the cold. Never leave your pet unattended in a vehicle during cold weather.",
+    "detailedTips": [
+      "Cars can reach freezing temperatures quickly",
+      "Pets left in cars risk hypothermia",
+      "Run all errands before taking pets home",
+      "If you must travel with pets, never leave them alone"
+    ],
+    "icon": "🚗",
+    "priority": "high",
+    "petTypes": ["dogs", "cats"],
+    "image": "https://i.postimg.cc/XYHjK8mB/car-safety-tip.jpg"
+  },
+  {
+    "tipId": 6,
+    "title": "Grooming Adjustments for Winter",
+    "category": "Grooming",
+    "description": "Proper winter grooming helps maintain insulation. Avoid shaving down to the skin and consider longer coats for protection.",
+    "detailedTips": [
+      "Don't shave double-coated breeds in winter",
+      "Regular brushing helps maintain insulating undercoat",
+      "Trim hair between toes to prevent ice buildup",
+      "Bathe less frequently to preserve natural oils"
+    ],
+    "icon": "✂️",
+    "priority": "medium",
+    "petTypes": ["dogs", "cats"],
+    "image": "https://i.postimg.cc/XYHjK8mB/winter-grooming-tip.jpg"
+  },
+  {
+    "tipId": 7,
+    "title": "Check Under Car Hoods",
+    "category": "Safety",
+    "description": "Outdoor cats and small animals often seek warmth in car engines. Always check and tap your hood before starting the car in winter.",
+    "detailedTips": [
+      "Knock on hood or honk horn before starting engine",
+      "Check wheel wells and undercarriage",
+      "Keep outdoor cats indoors during extreme cold",
+      "Provide outdoor shelter alternatives"
+    ],
+    "icon": "🚘",
+    "priority": "high",
+    "petTypes": ["cats", "small animals"],
+    "image": "https://i.postimg.cc/XYHjK8mB/car-hood-tip.jpg"
+  },
+  {
+    "tipId": 8,
+    "title": "Provide Fresh, Unfrozen Water",
+    "category": "Hydration",
+    "description": "Pets can become dehydrated in winter too. Ensure they always have access to fresh, unfrozen water both indoors and outdoors.",
+    "detailedTips": [
+      "Use heated water bowls for outdoor pets",
+      "Check water frequently for freezing",
+      "Add warm water to meals for extra hydration",
+      "Monitor water intake - pets drink less in cold"
+    ],
+    "icon": "💧",
+    "priority": "medium",
+    "petTypes": ["dogs", "cats", "small animals"],
+    "image": "https://i.postimg.cc/XYHjK8mB/water-tip.jpg"
+  },
+  {
+    "tipId": 9,
+    "title": "Winter Exercise Alternatives",
+    "category": "Exercise",
+    "description": "When it's too cold for outdoor activities, provide indoor exercise and mental stimulation to keep your pet healthy and happy.",
+    "detailedTips": [
+      "Create indoor obstacle courses",
+      "Use puzzle toys and treat dispensers",
+      "Practice obedience training indoors",
+      "Schedule playdates in indoor facilities"
+    ],
+    "icon": "🎾",
+    "priority": "medium",
+    "petTypes": ["dogs", "cats"],
+    "image": "https://i.postimg.cc/XYHjK8mB/indoor-exercise-tip.jpg"
+  },
+  {
+    "tipId": 10,
+    "title": "Recognize Frostbite in Pets",
+    "category": "Health & Safety",
+    "description": "Frostbite most commonly affects ears, tails, and paws. Know the signs: pale, gray, or blue skin that's cold and hard to the touch.",
+    "detailedTips": [
+      "Check extremities after cold exposure",
+      "Seek immediate vet care for suspected frostbite",
+      "Warm affected areas gradually with warm towels",
+      "Never rub frostbitten areas - it causes more damage"
+    ],
+    "icon": "❄️",
+    "priority": "high",
+    "petTypes": ["dogs", "cats", "small animals"],
+    "image": "https://i.postimg.cc/XYHjK8mB/frostbite-tip.jpg"
+  },
+  {
+    "tipId": 11,
+    "title": "Senior Pet Winter Care",
+    "category": "Special Care",
+    "description": "Older pets need extra attention in cold weather. Arthritis can worsen, and they're more susceptible to temperature changes.",
+    "detailedTips": [
+      "Provide orthopedic beds with extra padding",
+      "Use pet-safe heating pads",
+      "Shorter, more frequent potty breaks",
+      "Consider joint supplements (consult your vet)"
+    ],
+    "icon": "👴",
+    "priority": "medium",
+    "petTypes": ["dogs", "cats"],
+    "image": "https://i.postimg.cc/XYHjK8mB/senior-pet-tip.jpg"
+  },
+  {
+    "tipId": 12,
+    "title": "Holiday Safety Precautions",
+    "category": "Seasonal Safety",
+    "description": "Winter holidays bring unique hazards. Keep pets safe from decorations, toxic plants, and holiday foods.",
+    "detailedTips": [
+      "Secure Christmas trees to prevent tipping",
+      "Avoid tinsel and small ornaments",
+      "Keep pets away from poinsettias and lilies",
+      "No sharing holiday sweets or fatty foods"
+    ],
+    "icon": "🎄",
+    "priority": "medium",
+    "petTypes": ["dogs", "cats"],
+    "image": "https://i.postimg.cc/XYHjK8mB/holiday-safety-tip.jpg"
+  }
+]
