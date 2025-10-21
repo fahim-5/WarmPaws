@@ -11,7 +11,7 @@ const RootLayout = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-50 to-indigo-100">
       <Navbar />
-      <main className="flex-grow pt-16">
+      <main className="flex-grow">
         <AnimatePresence mode="wait">
           <motion.div
             key={location.pathname}
