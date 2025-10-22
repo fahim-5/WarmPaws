@@ -8,7 +8,7 @@
     "rating": 4.9,
     "slotsAvailable": 4,
     "description": "Professional winter coat fitting service to ensure your dog stays warm and comfortable in cold weather. We measure and recommend the perfect winter gear including insulated jackets, waterproof coats, and cozy sweaters tailored to your dog's breed and size.",
-    "image": "https://i.postimg.cc/XYHjK8mB/dog-winter-coat.jpg",
+    "image": "https://images.unsplash.com/photo-1729914592232-66ea29c9006a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8V2ludGVyJTIwQ29hdCUyMEZpdHRpbmclMjBmb3IlMjBEb2dzfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
     "category": "Clothing",
     "duration": "45 minutes",
     "features": ["Custom measurements", "Waterproof options", "Insulated materials", "Size recommendations"]
@@ -22,7 +22,7 @@
     "rating": 4.8,
     "slotsAvailable": 3,
     "description": "Specialized winter grooming service focusing on paw protection and coat maintenance. Includes moisturizing paw balm application, winter-safe shampoo, and detangling to prevent ice accumulation in fur.",
-    "image": "https://i.postimg.cc/XYHjK8mB/dog-grooming-winter.jpg",
+    "image": "https://images.unsplash.com/photo-1739804609062-4b249e564858?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8V2ludGVyJTIwR3Jvb21pbmclMjAlMjYlMjBQYXclMjBUcmVhdG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     "category": "Grooming",
     "duration": "1 hour",
     "features": ["Paw balm treatment", "Winter-safe products", "Coat conditioning", "Ice removal"]
@@ -36,7 +36,7 @@
     "rating": 4.95,
     "slotsAvailable": 2,
     "description": "24/7 emergency veterinary consultations for winter-related health issues including frostbite, hypothermia, and anti-freeze poisoning. Immediate telemedicine available for urgent cases.",
-    "image": "https://i.postimg.cc/XYHjK8mB/winter-vet-consultation.jpg",
+    "image": "https://images.unsplash.com/photo-1606619788401-85dd53e9c8be?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735",
     "category": "Medical",
     "duration": "30 minutes",
     "features": ["24/7 availability", "Telemedicine option", "Winter emergency focus", "Quick response"]
@@ -50,7 +50,7 @@
     "rating": 4.7,
     "slotsAvailable": 6,
     "description": "Professional installation of safe, energy-efficient heated pet beds and warming pads. We assess your home and recommend the perfect heated sleeping solution for your pet's comfort and safety.",
-    "image": "https://i.postimg.cc/XYHjK8mB/heated-pet-bed.jpg",
+    "image": "https://images.unsplash.com/photo-1760110756737-9ea31c02ba45?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
     "category": "Comfort",
     "duration": "1.5 hours",
     "features": ["Safety certified", "Energy efficient", "Multiple sizes", "Installation included"]
@@ -64,7 +64,7 @@
     "rating": 4.6,
     "slotsAvailable": 5,
     "description": "Customized winter nutrition plan for your pet. We analyze your pet's activity level, breed, and health conditions to create a winter diet that maintains optimal weight and energy during cold months.",
-    "image": "https://i.postimg.cc/XYHjK8mB/pet-nutrition.jpg",
+    "image": "https://images.unsplash.com/photo-1678708824943-3e0f9f31f0b5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8TnV0YXJhdGlvbiUyMGZvciUyMHBldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
     "category": "Nutrition",
     "duration": "1 hour",
     "features": ["Custom meal plans", "Winter calorie adjustment", "Supplement recommendations", "Follow-up support"]
@@ -78,7 +78,7 @@
     "rating": 4.8,
     "slotsAvailable": 8,
     "description": "Structured indoor exercise routines to keep your pet active and healthy during winter. Includes mental stimulation games, indoor agility courses, and cold-weather activity alternatives.",
-    "image": "https://i.postimg.cc/XYHjK8mB/indoor-exercise.jpg",
+    "image": "https://images.unsplash.com/photo-1678448371370-df76b95b2005?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
     "category": "Fitness",
     "duration": "1 hour",
     "features": ["Indoor activities", "Mental stimulation", "Breed-specific routines", "Equipment guidance"]
@@ -92,7 +92,7 @@
     "rating": 4.9,
     "slotsAvailable": 7,
     "description": "Application of medical-grade paw protection wax to shield your pet's paws from ice, salt, and harsh chemicals. Includes paw inspection and moisturizing treatment.",
-    "image": "https://i.postimg.cc/XYHjK8mB/paw-protection.jpg",
+    "image": "https://images.unsplash.com/photo-1728013309800-404df8c036b6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171",
     "category": "Paw Care",
     "duration": "30 minutes",
     "features": ["Medical-grade wax", "Salt protection", "Moisturizing treatment", "Paw inspection"]
@@ -106,7 +106,7 @@
     "rating": 4.7,
     "slotsAvailable": 10,
     "description": "Comprehensive workshop teaching pet owners how to handle winter emergencies including hypothermia, frostbite, ice-related injuries, and cold weather first aid techniques.",
-    "image": "https://i.postimg.cc/XYHjK8mB/first-aid-workshop.jpg",
+    "image": "https://images.unsplash.com/photo-1528846104175-4fd300ee59da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1172",
     "category": "Education",
     "duration": "2 hours",
     "features": ["Hands-on training", "Winter emergency focus", "Take-home kit", "Certification"]
