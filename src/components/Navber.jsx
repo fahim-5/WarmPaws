@@ -1,9 +1,9 @@
-import { useState, useContext } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../context/AuthContext';
-import { signOut } from 'firebase/auth';
-import { auth } from '../utils/firebase';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const { user } = useContext(AuthContext);
@@ -17,9 +17,9 @@ const Navbar = () => {
       await signOut(auth);
       setIsProfileOpen(false);
       setIsMenuOpen(false);
-      navigate('/');
+      navigate("/");
     } catch (error) {
-      console.error('Error logging out:', error);
+      console.error("Error logging out:", error);
     }
   };
 
@@ -37,8 +37,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="flex items-center space-x-3 group"
               onClick={closeAllMenus}
             >
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <span className="text-xl text-white">🐾</span>
               </motion.div>
               <div>
-                <motion.span 
+                <motion.span
                   className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
                   whileHover={{ scale: 1.05 }}
                 >
@@ -66,23 +66,62 @@ const Navbar = () => {
               <Link
                 to="/"
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                  isActiveRoute('/')
-                    ? 'text-blue-600 bg-blue-50 border border-blue-200 shadow-sm'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  isActiveRoute("/")
+                    ? "text-blue-600 bg-blue-50 border border-blue-200 shadow-sm"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                 }`}
               >
                 Home
               </Link>
-              
               <Link
                 to="/services"
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                  isActiveRoute('/services')
-                    ? 'text-blue-600 bg-blue-50 border border-blue-200 shadow-sm'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                  isActiveRoute("/services")
+                    ? "text-blue-600 bg-blue-50 border border-blue-200 shadow-sm"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                 }`}
               >
                 Services
+              </Link>
+              <Link
+                to="/experts"
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  isActiveRoute("/experts")
+                    ? "text-blue-600 bg-blue-50 border border-blue-200 shadow-sm"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                }`}
+              >
+                Our Experts
+              </Link>
+              <Link
+                to="/tips"
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  isActiveRoute("/tips")
+                    ? "text-blue-600 bg-blue-50 border border-blue-200 shadow-sm"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                }`}
+              >
+                Winter Tips
+              </Link>
+              <Link
+                to="/my-bookings"
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  isActiveRoute("/my-bookings")
+                    ? "text-blue-600 bg-blue-50 border border-blue-200 shadow-sm"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                }`}
+              >
+                My Bookings
+              </Link>
+              <Link
+                to="/contact"
+                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
+                  isActiveRoute("/contact")
+                    ? "text-blue-600 bg-blue-50 border border-blue-200 shadow-sm"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                }`}
+              >
+                Contact
               </Link>
             </div>
 
@@ -91,16 +130,16 @@ const Navbar = () => {
                 <Link
                   to="/profile"
                   className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 ${
-                    isActiveRoute('/profile')
-                      ? 'text-blue-600 bg-blue-50 border border-blue-200 shadow-sm'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    isActiveRoute("/profile")
+                      ? "text-blue-600 bg-blue-50 border border-blue-200 shadow-sm"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
                 >
                   My Profile
                 </Link>
-                
+
                 <div className="relative">
-                  <motion.button 
+                  <motion.button
                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 border border-transparent hover:border-gray-200"
                     onClick={() => setIsProfileOpen(!isProfileOpen)}
                     whileHover={{ scale: 1.02 }}
@@ -110,30 +149,39 @@ const Navbar = () => {
                       {user.photoURL ? (
                         <img
                           src={user.photoURL}
-                          alt={user.displayName || 'User'}
+                          alt={user.displayName || "User"}
                           className="w-9 h-9 rounded-full object-cover"
                         />
                       ) : (
                         <span className="text-white text-sm font-bold">
-                          {user.displayName ? user.displayName.charAt(0).toUpperCase() : 'U'}
+                          {user.displayName
+                            ? user.displayName.charAt(0).toUpperCase()
+                            : "U"}
                         </span>
                       )}
                     </div>
                     <div className="text-left hidden lg:block">
                       <p className="text-sm font-semibold text-gray-900">
-                        {user.displayName || 'User'}
+                        {user.displayName || "User"}
                       </p>
                       <p className="text-xs text-gray-500 truncate max-w-[120px]">
                         {user.email}
                       </p>
                     </div>
                     <motion.svg
-                      className={`w-4 h-4 text-gray-500 transition-transform ${isProfileOpen ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 text-gray-500 transition-transform ${
+                        isProfileOpen ? "rotate-180" : ""
+                      }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </motion.svg>
                   </motion.button>
 
@@ -148,19 +196,29 @@ const Navbar = () => {
                       >
                         <div className="px-4 py-3 border-b border-gray-100">
                           <p className="text-sm font-semibold text-gray-900 truncate">
-                            {user.displayName || 'User'}
+                            {user.displayName || "User"}
                           </p>
                           <p className="text-xs text-gray-500 truncate">
                             {user.email}
                           </p>
                         </div>
-                        
+
                         <button
                           onClick={handleLogout}
                           className="w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition-colors duration-200 flex items-center space-x-2"
                         >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                            />
                           </svg>
                           <span>Logout</span>
                         </button>
@@ -223,7 +281,7 @@ const Navbar = () => {
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
@@ -232,25 +290,73 @@ const Navbar = () => {
                 <Link
                   to="/"
                   className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
-                    isActiveRoute('/')
-                      ? 'text-blue-600 bg-blue-50 border border-blue-200'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    isActiveRoute("/")
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
                   onClick={closeAllMenus}
                 >
                   Home
                 </Link>
-                
+
                 <Link
                   to="/services"
                   className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
-                    isActiveRoute('/services')
-                      ? 'text-blue-600 bg-blue-50 border border-blue-200'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    isActiveRoute("/services")
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
                   onClick={closeAllMenus}
                 >
                   Services
+                </Link>
+
+                <Link
+                  to="/experts"
+                  className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
+                    isActiveRoute("/experts")
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                  onClick={closeAllMenus}
+                >
+                  Our Experts
+                </Link>
+
+                <Link
+                  to="/tips"
+                  className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
+                    isActiveRoute("/tips")
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                  onClick={closeAllMenus}
+                >
+                  Winter Tips
+                </Link>
+
+                <Link
+                  to="/my-bookings"
+                  className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
+                    isActiveRoute("/my-bookings")
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                  onClick={closeAllMenus}
+                >
+                  My Bookings
+                </Link>
+
+                <Link
+                  to="/contact"
+                  className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
+                    isActiveRoute("/contact")
+                      ? "text-blue-600 bg-blue-50 border border-blue-200"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                  onClick={closeAllMenus}
+                >
+                  Contact
                 </Link>
 
                 {user ? (
@@ -258,33 +364,35 @@ const Navbar = () => {
                     <Link
                       to="/profile"
                       className={`block px-4 py-3 rounded-lg text-base font-semibold transition-all duration-200 ${
-                        isActiveRoute('/profile')
-                          ? 'text-blue-600 bg-blue-50 border border-blue-200'
-                          : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                        isActiveRoute("/profile")
+                          ? "text-blue-600 bg-blue-50 border border-blue-200"
+                          : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                       }`}
                       onClick={closeAllMenus}
                     >
                       My Profile
                     </Link>
-                    
+
                     <div className="px-4 py-3 border-t border-gray-200 mt-2">
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-md">
                           {user.photoURL ? (
                             <img
                               src={user.photoURL}
-                              alt={user.displayName || 'User'}
+                              alt={user.displayName || "User"}
                               className="w-11 h-11 rounded-full object-cover"
                             />
                           ) : (
                             <span className="text-white text-base font-bold">
-                              {user.displayName ? user.displayName.charAt(0).toUpperCase() : 'U'}
+                              {user.displayName
+                                ? user.displayName.charAt(0).toUpperCase()
+                                : "U"}
                             </span>
                           )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-semibold text-gray-900 truncate">
-                            {user.displayName || 'User'}
+                            {user.displayName || "User"}
                           </p>
                           <p className="text-xs text-gray-500 truncate">
                             {user.email}
@@ -292,7 +400,7 @@ const Navbar = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <button
                       onClick={() => {
                         handleLogout();
@@ -300,8 +408,18 @@ const Navbar = () => {
                       }}
                       className="w-full text-left px-4 py-3 rounded-lg text-base font-semibold text-red-600 hover:bg-red-50 transition-colors duration-200 flex items-center space-x-2 border border-red-200"
                     >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                        />
                       </svg>
                       <span>Logout</span>
                     </button>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useBookings } from '../context/BookingsContext';
 
 const CalendarIconSVG = ({ className = "w-5 h-5" }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -39,6 +40,7 @@ const XMarkIconSVG = ({ className = "w-5 h-5" }) => (
 );
 
 const ConsultationBooking = ({ expert, isOpen, onClose }) => {
+  const { addConsultationBooking } = useBookings();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -72,6 +74,13 @@ const ConsultationBooking = ({ expert, isOpen, onClose }) => {
     setIsSubmitting(true);
 
     setTimeout(() => {
+      addConsultationBooking({
+        expertId: expert?.id,
+        expertName: expert?.name,
+        expertSpecialty: expert?.specialty,
+        ...formData
+      });
+
       setIsSubmitting(false);
       setIsSubmitted(true);
       

@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AuthContext } from '../context/AuthContext';
+import { useBookings } from '../context/BookingsContext';
 import { toast } from 'react-hot-toast';
 import {
   StarIcon,
@@ -11,7 +12,8 @@ import {
   EnvelopeIcon,
   MapPinIcon,
   ShieldCheckIcon,
-  ClockIcon
+  ClockIcon,
+  CheckIcon
 } from '@heroicons/react/24/solid';
 import {
   ArrowLeftIcon,
@@ -23,6 +25,7 @@ import servicesData from '../data/services.json';
 const ServiceDetails = () => {
   const { id } = useParams();
   const { user } = useContext(AuthContext);
+  const { addServiceBooking } = useBookings();
   const navigate = useNavigate();
   const [service, setService] = useState(null);
   const [isBooked, setIsBooked] = useState(false);
@@ -56,6 +59,19 @@ const ServiceDetails = () => {
     setLoading(true);
 
     setTimeout(() => {
+      addServiceBooking({
+        serviceId: service.serviceId,
+        serviceName: service.serviceName,
+        providerName: service.providerName,
+        price: service.price,
+        image: service.image,
+        category: service.category,
+        duration: '30-60 minutes',
+        location: 'Main Clinic',
+        status: 'confirmed',
+        ...bookingData
+      });
+
       setLoading(false);
       setIsBooked(true);
       toast.success('Service booked successfully!');
@@ -275,20 +291,20 @@ const ServiceDetails = () => {
                   Thank you for booking {service.serviceName}. We've sent a confirmation to your email.
                 </p>
                 <div className="space-y-3">
+                  <Link
+                    to="/my-bookings"
+                    className="block w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                  >
+                    View My Bookings
+                  </Link>
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => setIsBooked(false)}
-                    className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    className="w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
                   >
                     Book Another Service
                   </motion.button>
-                  <Link
-                    to="/services"
-                    className="block w-full border border-gray-300 text-gray-700 py-3 px-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-                  >
-                    Browse More Services
-                  </Link>
                 </div>
               </div>
             ) : (

@@ -4,7 +4,6 @@ import { Autoplay, Pagination, EffectFade, Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ServiceCard from '../components/ServiceCard';
-import ExpertCard from '../components/ExpertCard';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -12,7 +11,6 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 
 import servicesData from '../data/services.json';
-import expertsData from '../data/experts.json';
 import tipsData from '../data/tips.json';
 
 const Home = () => {
@@ -174,10 +172,10 @@ const Home = () => {
                         {slide.buttonText}
                       </Link>
                       <Link 
-                        to="/services" 
+                        to="/experts" 
                         className="inline-block border-2 border-white text-white font-bold px-10 py-5 rounded-2xl text-lg transition-all duration-300 transform hover:scale-105 hover:bg-white/10 backdrop-blur-sm"
                       >
-                        Learn More
+                        Meet Our Experts
                       </Link>
                     </motion.div>
                   </motion.div>
@@ -370,48 +368,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-b from-white to-purple-50/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg"
-            >
-              <span className="text-2xl text-white">👨‍⚕️</span>
-            </motion.div>
-            <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Meet Our Experts
-            </h2>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Our team of certified veterinarians and pet care specialists dedicated to keeping your pets healthy and happy
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {expertsData.map((expert, index) => (
-              <motion.div
-                key={expert.id}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: index * 0.15, duration: 0.6 }}
-              >
-                <ExpertCard expert={expert} />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-20 bg-gradient-to-r from-red-500 via-orange-500 to-red-600 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/20"></div>
@@ -463,7 +419,7 @@ const Home = () => {
                 className="bg-white text-red-600 font-black px-12 py-6 rounded-2xl text-xl hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-3xl flex items-center space-x-4"
               >
                 <span className="text-2xl">📞</span>
-                <span>+1 (555) 911-PETS</span>
+                <span>01774071130</span>
               </motion.a>
               
               <motion.div

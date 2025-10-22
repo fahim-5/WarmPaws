@@ -256,12 +256,7 @@ const Services = () => {
             >
               📞 Call Emergency Line
             </motion.a>
-            <Link
-              to="/"
-              className="border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors duration-200"
-            >
-              Learn More
-            </Link>
+            
           </div>
         </motion.div>
       </div>
