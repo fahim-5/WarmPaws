@@ -3,7 +3,7 @@
 A cozy winter companion platform designed for pet owners to ensure their furry friends stay warm, safe, and healthy during the cold season. Users can explore local pet care services, winter pet clothing, grooming options, and expert tips — all in one friendly interface.
 
 ## 🌐 Live Demo
-[Live Site URL](#) <!-- Add your deployment URL here -->
+[https://warmpaws-by-fahim.netlify.app/](#) <!-- Add your deployment URL here -->
 
 ## 🚀 Features
 
@@ -173,7 +173,7 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/warmpaws.git
+   git clone https://github.com/fahim-5/warmpaws.git
    cd warmpaws
    ```
 
