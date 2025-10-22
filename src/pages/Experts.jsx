@@ -157,7 +157,6 @@ const Experts = () => {
                 <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
                   Book an appointment with one of our experts and ensure your pet gets the best winter care possible.
                 </p>
-
               </div>
             </div>
           </motion.div>
